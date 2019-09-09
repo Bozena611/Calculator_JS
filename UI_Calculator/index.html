@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="grid-container">
+		<div class="grid-item display">
+			<input type="text" name="display" id="display" disabled>
+		</div>
+		<div class="grid-item item0">
+			<button id="zero" value="0" onclick="display('0')">0</button>
+		</div>
+		<div class="grid-item item1">
+			<button id="one" value="1" onclick="display('1')">1</button>
+		</div>
+		<div class="grid-item item2">
+			<button id="two" value="2" onclick="display('2')"/>2</button>
+		</div>
+		<div class="grid-item item3">
+			<button id="three" value="3" onclick="display('3')"/>3</button>
+		</div>
+		<div class="grid-item item4">
+			<button id="four" value="4" onclick="display('4')">4</button>
+		</div>
+		<div class="grid-item item5">
+			<button id="five" value="5" onclick="display('5')">5</button>
+		</div>
+		<div class="grid-item item6">
+			<button id="six" value="6" onclick="display('6')">6</button>
+		</div>
+		<div class="grid-item item7">
+			<button id="seven" value="7" onclick="display('7')">7</button>
+		</div>
+		<div class="grid-item item8">
+			<button id="eight" value="8" onclick="display('8')">8</button>
+		</div>
+		<div class="grid-item item9">
+			<button id="nine" value="9" onclick="display('9')">9</button>
+		</div>
+		<div class="grid-item item_add">
+			<button id="add" value="+" onclick="display('+')">+</button>
+		</div>
+		<div class="grid-item item_subtract">
+			<button id="subtract" value="-" onclick="display('-')">-</button>
+		</div>
+		<div class="grid-item item_multiply">
+			<button id="multiply" value="*" onclick="display('*')">*</button>
+		</div>
+		<div class="grid-item item_divide">
+			<button id="divide" value="/" onclick="display('/')">/</button>
+		</div>
+		<div class="grid-item item_equal">
+			<button id="equal" value ="=" onclick="result()">=</button>
+		</div>
+		<div class="grid-item itemC">
+			<button id="clear" value="c" onclick="blank()">C</button>
+		</div>
+	</div>
+
+</body>
+<script src="script.js"></script>
+</html>

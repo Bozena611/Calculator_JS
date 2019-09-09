@@ -1,0 +1,101 @@
+
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 80px auto auto auto auto;
+  grid-gap: 10px;
+  background-color: #9fc4e0;
+  padding: 5px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+button {
+	font-size: 20px;
+	width: 55px;
+	height: 55px;
+}
+
+.display {
+  grid-column: 1 / span 4;
+  grid-row: 1;
+}
+#display {
+	height: 50px;
+	width: 90%;
+	margin-top: 5px;
+	font-size: 20px;
+	font-style: bold;
+	color: black;
+	text-align: right;
+}
+.item0 {
+	grid-column: 2;
+	grid-row: 5;
+}
+.item1 {
+	grid-column: 1;
+	grid-row: 4;
+}
+.item2 {
+	grid-column: 2;
+	grid-row: 4;
+}
+
+.item3 {
+	grid-column: 3;
+	grid-row: 4;
+}
+.item4 {
+	grid-column: 1;
+	grid-row: 3;
+}
+.item5 {
+	grid-column: 2;
+	grid-row: 3;
+}
+.item6 {
+	grid-column: 3;
+	grid-row: 3;
+}
+.item7 {
+	grid-column: 1;
+	grid-row: 2;
+}
+.item8 {
+	grid-column: 2;
+	grid-row: 2;
+}
+.item9 {
+	grid-column: 3;
+	grid-row: 2;
+}
+.item_add {
+	grid-column: 4;
+	grid-row: 5;
+}
+.item_subtract {
+	grid-column: 4;
+	grid-row: 4;
+}
+.item_multiply {
+	grid-column: 4;
+	grid-row: 3;
+}
+.item_divide {
+	grid-column: 4;
+	grid-row: 2;
+}
+
+.itemC {
+  grid-column: 1;
+  grid-row: 5;
+}
+
+.item_equal {
+  grid-column: 3;
+  grid-row: 5;
+  }
+#equal {
+	background-color: #228B22;
+}
