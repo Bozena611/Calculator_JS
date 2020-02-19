@@ -1,38 +1,57 @@
 
-document.getElementById("0").addEventListener("click",function(){ display(0); });
-document.getElementById("1").addEventListener("click",function(){ display(1); });
-document.getElementById("2").addEventListener("click",function(){ display(2); });
-document.getElementById("3").addEventListener("click",function(){ display(3); });
-document.getElementById("4").addEventListener("click",function(){ display(4); });
-document.getElementById("5").addEventListener("click",function(){ display(5); });
-document.getElementById("6").addEventListener("click",function(){ display(6); });
-document.getElementById("7").addEventListener("click",function(){ display(7); });
-document.getElementById("8").addEventListener("click",function(){ display(8); });
-document.getElementById("9").addEventListener("click",function(){ display(9); });
+function main (){
+	//let numbers = [0,1,2,3,4,5,6,7,8,9];
+	for (let i=0; i<10; i++) {
+	//for (let i=0; i<numbers.length; i++) 
+		document.getElementById(i).addEventListener("click",function(){ display(i); });
+	}
+	
+	document.getElementById("add").addEventListener("click",function(){ display('+'); });
+	document.getElementById("subtract").addEventListener("click",function(){ display('-'); });
+	document.getElementById("multiply").addEventListener("click",function(){ display('*'); });
+	document.getElementById("divide").addEventListener("click",function(){ display('/'); });
+	document.getElementById("clear").addEventListener("click",function(){blank(); });
+	document.getElementById("equal").addEventListener("click",function(){ result(); });
+	}
 
-document.getElementById("add").addEventListener("click",function(){ display('+'); });
-document.getElementById("subtract").addEventListener("click",function(){ display('-'); });
-document.getElementById("multiply").addEventListener("click",function(){ display('*'); });
-document.getElementById("divide").addEventListener("click",function(){ display('/'); });
 
-document.getElementById("clear").addEventListener("click",function(){blank(); });
-document.getElementById("equal").addEventListener("click",function(){ result(); });
+
+
+
+
 
 
 
 //function to display value 
 function display(character){ 
-	     document.getElementById("display").value+=character 
+	if (isResult) {
+		blank();
+		isResult = false;
+	} 
+	  document.getElementById("display").value+=character;
 	} 
 
 //function to clear the display 
+
 function blank(){ 
-	 document.getElementById("display").value = "" 
-	} 
+	 document.getElementById("display").value = "";
+} 
+
+
+//let = isResult = false; // if I use let it has to be here because it's inside the scope of that function
 
 function result(){
-             var a = document.getElementById("display").value 
-             var b = eval(a) 
-             document.getElementById("display").value = b 
-         } 
+ var a = document.getElementById("display").value 
+ var b = eval(a) 
+ document.getElementById("display").value = b;
+ isResult = true; 
+}
+
+var isResult = false; //global and JS reads throughut the whole document 
+
+
+
+main();
+
+
 
